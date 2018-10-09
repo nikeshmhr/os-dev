@@ -24,7 +24,7 @@ mov al, [bx]
 int 0x10            ; Does this print an X? Yes
 
 ; Fourth attempt
-mov al, [0x7c1d]  ; Since from our hex dump we know our 'X' was 0x1e (30) bytes from start of our boot sector we can dereferencing it straightly
+mov al, [0x7c1d]  ; Since from our hex dump we know our 'X' was 0x1d (29) bytes from start of our boot sector we can dereferencing it straightly
 int 0x10
 jmp $
 
