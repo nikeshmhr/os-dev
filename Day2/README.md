@@ -1,4 +1,16 @@
 # NOTES
+#### [org 0x7c00]
+- To correct label reference (e.g [x_marks.asm](../Day1/x_marks.asm))
+
+#### ***stack***
+- Grows downwards
+- Need two register to be used i.e **bp** and **sp**
+- **bp** is the base pointer of the stack say (0x8000)
+- **sp** is the current head stack point (initially 0x8000 and decreases as we push element on top of stack say 0x8000 - 0x2 => 0x7ffe)
+- Two operations provided to act on stack are **push** and **pop**
+- **push** pushes value into top of stack, this pushes as 16-bit value so most significant byte will be padded by 0x0
+- **pop** removes and returns element from top of the stack, this pops 16-bit value so we need to assign it to 16-bit register e.g *bx* and then extract the least significant byte
+
 #### ***ip*** register
 - Pointer to current instruction
 - This register cannot be accessed directly
