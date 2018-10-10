@@ -1,6 +1,8 @@
 ;
 ; Simple boot sector that prints the 16-bit hex value (in hex format) stored in
 ; dx register
+; REFERENCES
+; http://mziccard.me/2015/05/08/modulo-and-division-vs-bitwise-operations/
 ;
 [org 0x7c00]
 
