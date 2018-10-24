@@ -1,5 +1,6 @@
 ;
 ; A simple boot sector program that demonstrates segment offsetting
+; http://wiki.osdev.org/Segmentation
 ;
 mov ah, 0x0e
 
@@ -7,12 +8,12 @@ mov al, [the_secret]
 int 0x10
 
 mov bx, 0x7c0             ; Can't set ds directly, so set bx
-mov ds, dx                ; then copy bx to ds.
+mov ds, bx                ; then copy bx to ds.
 mov al, [the_secret]
 int 0x10
 
 mov al, [es:the_secret]   ; Tell the CPU to use the es (not ds) segment.
-int 0x10                  ; Does this print an X?
+int 0x10                  ; Does this print an X? isn't es currently 0x000
 
 mov bx, 0x7c0
 mov es, bx
