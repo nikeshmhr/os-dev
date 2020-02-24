@@ -15,7 +15,7 @@ Solved Question 4
 my_label:
   db 'Booting OS...', 0
 ```
-- ***dw*** data write, when used writes the data as a word (2 byte) value directly into our binary file. When writing data as a WORD little-endian format is used (i.e least significant byte is written first follwed by most significant byte)
+- ***dw*** data write, when used writes the data as a word (2 byte) value directly into our binary file. When writing data as a WORD little-endian format is used (i.e least significant byte is written first followed by most significant byte)
 - Example:
   ```
   asm
